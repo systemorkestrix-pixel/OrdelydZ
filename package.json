@@ -8,7 +8,7 @@
     "vercel:build": "npm run typecheck && npm --prefix apps/web run build",
     "db:push": "npm --prefix lib/db run push",
     "db:push-force": "npm --prefix lib/db run push-force",
-    "db:prepare": "npm --prefix lib/db run prepare",
+    "db:prepare": "npm --prefix lib/db run db:prepare",
     "db:reset": "npm --prefix lib/db run reset",
     "db:reset-schema": "npm --prefix lib/db run reset-schema",
     "db:seed": "npm --prefix lib/db run seed",
