@@ -5,7 +5,7 @@
   "packageManager": "pnpm@11.1.2",
   "scripts": {
     "build": "npm run typecheck && npm --prefix apps/api-server run build && npm --prefix apps/web run build",
-    "vercel:build": "npm run typecheck && npm --prefix apps/web run build",
+    "vercel:build": "npm run typecheck && npm --prefix apps/api-server run build && npm --prefix apps/web run build",
     "db:push": "npm --prefix lib/db run push",
     "db:push-force": "npm --prefix lib/db run push-force",
     "db:prepare": "npm --prefix lib/db run db:prepare",
