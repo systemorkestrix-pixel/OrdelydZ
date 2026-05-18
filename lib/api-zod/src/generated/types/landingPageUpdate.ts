@@ -5,8 +5,8 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { LandingPageUpdateGalleryDisplay } from "./landingPageUpdateGalleryDisplay";
-import type { LandingPageUpdateTemplate } from "./landingPageUpdateTemplate";
+import type { LandingPageUpdateGalleryDisplay } from "./landingPageUpdateGalleryDisplay.js";
+import type { LandingPageUpdateTemplate } from "./landingPageUpdateTemplate.js";
 
 export interface LandingPageUpdate {
   productName?: string;

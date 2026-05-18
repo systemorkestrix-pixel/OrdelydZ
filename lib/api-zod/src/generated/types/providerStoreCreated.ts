@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { ProviderStore } from "./providerStore";
+import type { ProviderStore } from "./providerStore.js";
 
 export interface ProviderStoreCreated {
   store: ProviderStore;

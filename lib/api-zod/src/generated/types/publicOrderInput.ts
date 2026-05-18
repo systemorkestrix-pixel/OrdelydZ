@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { PublicOrderInputDeliveryMethod } from "./publicOrderInputDeliveryMethod";
+import type { PublicOrderInputDeliveryMethod } from "./publicOrderInputDeliveryMethod.js";
 
 export interface PublicOrderInput {
   customerName: string;

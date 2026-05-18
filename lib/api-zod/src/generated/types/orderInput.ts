@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { DeliveryMethod } from "./deliveryMethod";
+import type { DeliveryMethod } from "./deliveryMethod.js";
 
 export interface OrderInput {
   landingPageId: number;

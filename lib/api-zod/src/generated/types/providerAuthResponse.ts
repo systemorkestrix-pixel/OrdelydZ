@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { ProviderUser } from "./providerUser";
+import type { ProviderUser } from "./providerUser.js";
 
 export interface ProviderAuthResponse {
   user?: ProviderUser | null;

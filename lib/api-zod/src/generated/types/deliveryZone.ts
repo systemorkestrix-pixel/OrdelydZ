@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { AlgeriaCommune } from "./algeriaCommune";
+import type { AlgeriaCommune } from "./algeriaCommune.js";
 
 export interface DeliveryZone {
   /** @nullable */

@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { Order } from "./order";
+import type { Order } from "./order.js";
 
 export interface OrdersPage {
   orders: Order[];

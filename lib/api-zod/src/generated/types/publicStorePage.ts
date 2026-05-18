@@ -5,9 +5,9 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { PublicStoreCategory } from "./publicStoreCategory";
-import type { PublicStoreInfo } from "./publicStoreInfo";
-import type { PublicStoreProduct } from "./publicStoreProduct";
+import type { PublicStoreCategory } from "./publicStoreCategory.js";
+import type { PublicStoreInfo } from "./publicStoreInfo.js";
+import type { PublicStoreProduct } from "./publicStoreProduct.js";
 
 export interface PublicStorePage {
   store: PublicStoreInfo;

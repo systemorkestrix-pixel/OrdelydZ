@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { OrderStatus } from "./orderStatus";
+import type { OrderStatus } from "./orderStatus.js";
 
 export interface OrderUpdate {
   status?: OrderStatus;

@@ -5,8 +5,8 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { PublicDeliveryZone } from "./publicDeliveryZone";
-import type { PublicLandingPageGalleryDisplay } from "./publicLandingPageGalleryDisplay";
+import type { PublicDeliveryZone } from "./publicDeliveryZone.js";
+import type { PublicLandingPageGalleryDisplay } from "./publicLandingPageGalleryDisplay.js";
 
 export interface PublicLandingPage {
   productName: string;

@@ -5,8 +5,8 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { DeliveryMethod } from "./deliveryMethod";
-import type { OrderStatus } from "./orderStatus";
+import type { DeliveryMethod } from "./deliveryMethod.js";
+import type { OrderStatus } from "./orderStatus.js";
 
 export interface Order {
   id: number;

@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { ImageUploadInputContentType } from "./imageUploadInputContentType";
+import type { ImageUploadInputContentType } from "./imageUploadInputContentType.js";
 
 export interface ImageUploadInput {
   fileName: string;

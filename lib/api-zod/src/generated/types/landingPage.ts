@@ -5,8 +5,8 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { LandingPageGalleryDisplay } from "./landingPageGalleryDisplay";
-import type { LandingPageTemplate } from "./landingPageTemplate";
+import type { LandingPageGalleryDisplay } from "./landingPageGalleryDisplay.js";
+import type { LandingPageTemplate } from "./landingPageTemplate.js";
 
 export interface LandingPage {
   id: number;

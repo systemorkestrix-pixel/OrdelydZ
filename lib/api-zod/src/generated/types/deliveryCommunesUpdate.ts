@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { DeliveryCommunesUpdateCommunesItem } from "./deliveryCommunesUpdateCommunesItem";
+import type { DeliveryCommunesUpdateCommunesItem } from "./deliveryCommunesUpdateCommunesItem.js";
 
 export interface DeliveryCommunesUpdate {
   communes: DeliveryCommunesUpdateCommunesItem[];

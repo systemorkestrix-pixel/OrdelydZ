@@ -5,7 +5,7 @@
  * Conversational Order Operating System API
  * OpenAPI spec version: 0.1.0
  */
-import type { PublicCommune } from "./publicCommune";
+import type { PublicCommune } from "./publicCommune.js";
 
 export interface PublicDeliveryZone {
   id: number;
