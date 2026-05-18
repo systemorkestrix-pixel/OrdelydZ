@@ -1,6 +1,6 @@
 import { index, serial, integer, text, timestamp } from "drizzle-orm/pg-core";
-import { appSchema } from "./app-schema";
-import { storesTable } from "./stores";
+import { appSchema } from "./app-schema.js";
+import { storesTable } from "./stores.js";
 
 export const usersTable = appSchema.table("users", {
   id: serial("id").primaryKey(),

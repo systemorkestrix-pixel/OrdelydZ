@@ -2,8 +2,8 @@ import { sql } from "drizzle-orm";
 import { boolean, index, integer, serial, text, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod/v4";
-import { appSchema } from "./app-schema";
-import { storesTable } from "./stores";
+import { appSchema } from "./app-schema.js";
+import { storesTable } from "./stores.js";
 
 export const productCategoriesTable = appSchema.table("product_categories", {
   id: serial("id").primaryKey(),

@@ -1,11 +1,11 @@
 import { index, serial, integer, text, numeric, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod/v4";
-import { appSchema } from "./app-schema";
-import { storesTable } from "./stores";
-import { customersTable } from "./customers";
-import { landingPagesTable } from "./landing-pages";
-import { deliveryMethodEnum, deliveryZonesTable } from "./delivery-zones";
+import { appSchema } from "./app-schema.js";
+import { storesTable } from "./stores.js";
+import { customersTable } from "./customers.js";
+import { landingPagesTable } from "./landing-pages.js";
+import { deliveryMethodEnum, deliveryZonesTable } from "./delivery-zones.js";
 
 export const orderStatusEnum = appSchema.enum("order_status", [
   "NEW",

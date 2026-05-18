@@ -1,8 +1,8 @@
 import { index, serial, integer, text, numeric, boolean, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod/v4";
-import { appSchema } from "./app-schema";
-import { storesTable } from "./stores";
+import { appSchema } from "./app-schema.js";
+import { storesTable } from "./stores.js";
 
 export const deliveryMethodEnum = appSchema.enum("delivery_method", [
   "HOME",

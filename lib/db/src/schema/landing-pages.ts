@@ -2,9 +2,9 @@ import { sql } from "drizzle-orm";
 import { index, serial, integer, text, numeric, boolean, timestamp, uniqueIndex, jsonb } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod/v4";
-import { appSchema } from "./app-schema";
-import { storesTable } from "./stores";
-import { productCategoriesTable } from "./product-categories";
+import { appSchema } from "./app-schema.js";
+import { storesTable } from "./stores.js";
+import { productCategoriesTable } from "./product-categories.js";
 
 export const landingPagesTable = appSchema.table("landing_pages", {
   id: serial("id").primaryKey(),

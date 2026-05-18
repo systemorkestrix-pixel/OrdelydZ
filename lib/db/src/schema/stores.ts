@@ -1,7 +1,7 @@
 import { serial, text, boolean, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod/v4";
-import { appSchema } from "./app-schema";
+import { appSchema } from "./app-schema.js";
 
 export const storesTable = appSchema.table("stores", {
   id: serial("id").primaryKey(),
