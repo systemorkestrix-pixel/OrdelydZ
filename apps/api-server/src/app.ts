@@ -1,9 +1,5 @@
-import express, {
-  type ErrorRequestHandler,
-  type Express,
-  type Request,
-  type Response,
-} from "express";
+import express, { type ErrorRequestHandler } from "express";
+import type { IncomingMessage, ServerResponse } from "node:http";
 import cors from "cors";
 import session from "express-session";
 import connectPgSimple from "connect-pg-simple";
@@ -43,7 +39,7 @@ if (isProduction && !process.env.PROVIDER_PASSWORD_HASH) {
 
 const PgSessionStore = connectPgSimple(session);
 
-const app: Express = express();
+const app = express();
 
 app.set("trust proxy", 1);
 
@@ -51,10 +47,10 @@ app.use(
   pinoHttp({
     logger,
     serializers: {
-      req(req: Request) {
+      req(req: IncomingMessage & { id?: unknown }) {
         return { id: req.id, method: req.method, url: req.url?.split("?")[0] };
       },
-      res(res: Response) {
+      res(res: ServerResponse) {
         return { statusCode: res.statusCode };
       },
     },
