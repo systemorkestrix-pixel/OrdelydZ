@@ -10,7 +10,7 @@
   "scripts": {
     "push": "node --env-file-if-exists=../../.env ./node_modules/drizzle-kit/bin.cjs push --config ./drizzle.config.ts",
     "push-force": "node --env-file-if-exists=../../.env ./node_modules/drizzle-kit/bin.cjs push --force --config ./drizzle.config.ts",
-    "prepare": "npm run push && npm run ensure-store-slugs && npm run ensure-returned-status && npm run ensure-delivery-system && npm run ensure-delivery-communes && npm run ensure-order-product-images && npm run ensure-landing-page-store-slugs && npm run ensure-sessions",
+    "db:prepare": "npm run push && npm run ensure-store-slugs && npm run ensure-returned-status && npm run ensure-delivery-system && npm run ensure-delivery-communes && npm run ensure-order-product-images && npm run ensure-landing-page-store-slugs && npm run ensure-sessions",
     "ensure-store-slugs": "node --env-file-if-exists=../../.env ./scripts/ensure-store-slugs.mjs",
     "ensure-returned-status": "node --env-file-if-exists=../../.env ./scripts/ensure-returned-status.mjs",
     "ensure-delivery-system": "node --env-file-if-exists=../../.env ./scripts/ensure-delivery-system.mjs",
