@@ -58,7 +58,7 @@ async function uploadToSupabaseStorage(
       "Content-Type": contentType,
       "x-upsert": "false",
     },
-    body: buffer,
+    body: new Uint8Array(buffer),
   });
 
   if (!response.ok) {
