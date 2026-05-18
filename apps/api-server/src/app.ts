@@ -1,9 +1,14 @@
-import express, { type Express } from "express";
+import express, {
+  type ErrorRequestHandler,
+  type Express,
+  type Request,
+  type Response,
+} from "express";
 import cors from "cors";
 import session from "express-session";
 import connectPgSimple from "connect-pg-simple";
-import pinoHttp from "pino-http";
-import path from "node:path";
+import { pinoHttp } from "pino-http";
+import * as path from "node:path";
 import { pool } from "@workspace/db";
 import router from "./routes/index.js";
 import { logger } from "./lib/logger.js";
@@ -46,10 +51,10 @@ app.use(
   pinoHttp({
     logger,
     serializers: {
-      req(req) {
+      req(req: Request) {
         return { id: req.id, method: req.method, url: req.url?.split("?")[0] };
       },
-      res(res) {
+      res(res: Response) {
         return { statusCode: res.statusCode };
       },
     },
@@ -108,16 +113,11 @@ app.use((_req, res) => {
   res.status(404).json({ error: "Not found" });
 });
 
-app.use(
-  (
-    err: Error,
-    _req: express.Request,
-    res: express.Response,
-    _next: express.NextFunction,
-  ) => {
-    logger.error(err, "Unhandled error");
-    res.status(500).json({ error: "خطأ داخلي في الخادم" });
-  },
-);
+const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
+  logger.error(err, "Unhandled error");
+  res.status(500).json({ error: "Internal server error" });
+};
+
+app.use(errorHandler);
 
 export default app;
